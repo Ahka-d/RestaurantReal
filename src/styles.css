@@ -1,0 +1,148 @@
+@font-face {
+    font-family: "Fascina";
+    src: url(./assets/FascinateInline-Regular.ttf);
+}
+
+*,*::after,*::before{
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    margin: 0;
+    min-height: 100vh;
+    background-color: #2f2f2f;
+}
+h1{
+    font-family: "Fascina";
+    text-align: center;
+    margin: 0;
+    padding: 15px;
+    background-color: #2f2f2f;
+    color: rgb(197, 148, 83);
+}
+h2{
+    font-family: "Fascina";
+    font-style: oblique;
+    text-align: center;
+    margin: 0;
+    padding: 15px;
+    background-color: #2f2f2f;
+    color: rgb(197, 148, 83);
+}
+.descrip{
+    margin: 10px auto 0 auto;
+    max-width: 800px;
+    p{
+        text-align: left;
+    }
+}
+nav{
+    margin: 0;
+    width: 100%;
+    background-color: #2f2f2f;
+    display: flex;
+    flex-flow: row wrap;
+    border-bottom: 1px solid aliceblue;
+    *{
+        font-size: 0.9rem;
+        border: none;
+        background-color: transparent;
+        border-bottom: none;
+        border-top: 1px solid aliceblue;
+        color: aliceblue;
+        padding: 10px;
+        flex: 1;
+        justify-self: stretch;
+        &:hover{
+            background-color: grey;
+        }
+        &:active{
+            background-color: rgb(143, 119, 119);
+        }
+    }
+}
+@media screen and (max-width: 900px){
+    nav{
+        display: flex;
+        flex-flow: column wrap;
+        *{
+            max-width: initial;
+            width: 100%;
+        }
+    }
+}
+#content{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #2f2f2f;
+}
+#dishes{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 300px);
+    justify-content: space-around;
+    gap: 47px;
+    padding: 25px 55px;
+}
+article{
+    border: 1px solid black;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: aliceblue;
+    height: fit-content;
+}
+span{
+    color: rgb(197, 148, 83);
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px #707070, -3px -3px 3px #a1a1a1;
+    max-width: 500px;
+    padding: 15px;
+    display: block;
+    text-overflow: ellipsis;
+    margin: 10px 0;
+    &:nth-child(4){
+        text-align: center;
+        font-size: 1.2rem;
+    }
+}
+p{
+    text-align: center;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+}
+.img{
+    background-color: darkorchid;
+    width: 250px;
+    height: 250px;
+}
+.about{
+    display: flex;
+    align-items: center;
+    flex-flow: column wrap;
+    gap: 15px;
+}
+footer{
+    display: flex;
+    padding: 25px;
+    justify-content: center;
+}
+a{
+        display: block;
+        padding: 10px;
+        margin: 10px;
+        color: aliceblue;
+        transition: color 0.25s ease-in;
+        &:link{
+            text-decoration: none;
+        }
+        &:hover{
+            color: purple;
+        }
+        &:active{
+            background-color: aliceblue;
+            border-radius: 15px;
+            color: black;
+        }
+    }
